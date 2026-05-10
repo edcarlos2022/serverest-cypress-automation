@@ -1,13 +1,13 @@
-import cypress from 'eslint-plugin-cypress';
+const cypress = require('eslint-plugin-cypress');
 
-export default [
+module.exports = [
   {
     ignores: ['node_modules/', 'dist/', 'cypress/videos/', 'cypress/screenshots/']
   },
   {
     files: ['cypress/e2e/**/*.js', 'cypress.config.js'],
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 2021,
       sourceType: 'script',
       globals: {
         cy: 'readonly',
@@ -31,7 +31,7 @@ export default [
   {
     files: ['cypress/support/**/*.js'],
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 2021,
       sourceType: 'module',
       globals: {
         cy: 'readonly',
